@@ -31,7 +31,9 @@ The following options are available:
 
 The `vmanomaly` service supports several command-line arguments to configure its behavior, including options for licensing, logging levels, and more. These arguments can be passed when starting the service via Docker or any other setup. Below is the list of available options:
 
-> `vmanomaly` support {{% available_from "v1.18.5" anomaly %}} running on config **directories**, see the `config` positional arg description in help message below.
+> `vmanomaly` supports {{% available_from "v1.18.5" anomaly %}} running on config **directories**, see the `config` positional arg description in help message below.
+
+> Single-dashed command-line arguments {{% available_from "v1.23.3" anomaly %}} can be used, e.g. `-license.forceOffline` in addition to `--license.forceOffline`. This now aligns with other VictoriaMetrics ecosystem components in terms of command-line arguments. Mixing the two styles is also supported, e.g. `-license.forceOffline --loggerLevel INFO`.
 
 ```shellhelp
 usage: vmanomaly.py [-h] [--license STRING | --licenseFile PATH] [--license.forceOffline] [--loggerLevel {DEBUG,WARNING,FATAL,ERROR,INFO}] [--watch] [--dryRun] [--outputSpec PATH] config [config ...]
@@ -118,13 +120,13 @@ Below are the steps to get `vmanomaly` up and running inside a Docker container:
 1. Pull Docker image:
 
 ```sh
-docker pull victoriametrics/vmanomaly:v1.23.0
+docker pull victoriametrics/vmanomaly:v1.23.3
 ```
 
 2. (Optional step) tag the `vmanomaly` Docker image:
 
 ```sh
-docker image tag victoriametrics/vmanomaly:v1.23.0 vmanomaly
+docker image tag victoriametrics/vmanomaly:v1.23.2 vmanomaly
 ```
 
 3. Start the `vmanomaly` Docker container with a *license file*, use the command below.
@@ -158,7 +160,7 @@ docker run -it --user 1000:1000 \
 services:
   # ...
   vmanomaly:
-    image: victoriametrics/vmanomaly:v1.23.0
+    image: victoriametrics/vmanomaly:v1.23.3
     volumes:
         $YOUR_LICENSE_FILE_PATH:/license
         $YOUR_CONFIG_FILE_PATH:/config.yml
