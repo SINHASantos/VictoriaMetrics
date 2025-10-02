@@ -90,14 +90,14 @@ plus the following additional features:
 
 - First-class consulting and technical support provided by the core VictoriaMetrics dev team.
 - [Monitoring of monitoring](https://victoriametrics.com/products/mom/) - this feature allows forecasting
-  and preventing possible issues in VictoriaMetrics setups.
+  and preventing possible issues in VictoriaLogs setups.
 - [Enterprise security compliance](https://victoriametrics.com/security/).
 - Prioritizing of feature requests from Enterprise customers.
 
 On top of this, Enterprise package of VictoriaLogs includes the following features:
 
 - [Automatic issuing of TLS certificates](https://docs.victoriametrics.com/victorialogs/#automatic-issuing-of-tls-certificates).
-- [mTLS for all the VictoriaMetrics components](https://docs.victoriametrics.com/victorialogs/#mtls).
+- [mTLS for all the VictoriaLogs components](https://docs.victoriametrics.com/victorialogs/#mtls).
 - [mTLS for communications between cluster components](https://docs.victoriametrics.com/victorialogs/cluster/#mtls).
 
 Contact us via [this page](https://victoriametrics.com/products/enterprise/) if you are interested in VictoriaLogs Enterprise.
